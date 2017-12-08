@@ -11,5 +11,8 @@ func main() {
 	client := api.NewClient(session)
 
 	apps, err := client.Apps().List()
-	fmt.Println(apps, err)
+        fmt.Println(err)
+        for _, app := range apps {
+		fmt.Println(app)
+	}
 }
